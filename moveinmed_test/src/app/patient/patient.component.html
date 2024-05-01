@@ -1,0 +1,47 @@
+<div class="main-space font-style">
+    <div class="flex-container-row box-space section-space">
+        <div class="flex-container-row box-space">
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="flex-container-column">
+            <div class="flex-container-row box-space font-name">
+                <div class="text-space"><strong>{{patient.firstName}}</strong></div>
+                <div class="text-space font-uppercase"><strong>{{patient.lastName}}</strong></div>
+                <div>{{patient.age}}</div>
+            </div>
+            <div class="flex-container-row box-space">
+                <div>Né·e le {{patient.birthdayDate | date:'d/M/yyyy'}}, de sexe {{patient.sex}}, {{patient.gender}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ligne"><hr></div>
+    
+    <div class="flex-container-row">
+        <div class="flex-container-row">
+            <div class="flex-container-column box-space">
+                <div class="prefix">Téléphone patient: </div>
+                <div class="prefix">Practicien référent: </div>
+                <div class="prefix">Médecin référent: </div>
+            </div>
+            <div class="flex-container-column box-space">
+                <div class="blue-color"><strong>{{patient.phone}}</strong></div>
+                <div class="green-color"><i class="fa-solid fa-user-doctor text-space green-color"></i>{{patient.referringPractitionerFirstName}} {{patient.referringPractitionerLastName}}</div>
+                <div class="green-color"><i class="fa-solid fa-user-doctor text-space green-color"></i>{{patient.referringDoctorFirstName}} {{patient.referringDoctorLastName}}</div>
+            </div>
+        </div>
+
+        <div class="flex-container-row">
+            <div class="flex-container-column box-space">
+                <div class="prefix">Protocole en cours:</div>
+                <div class="prefix">Pathologie: </div>
+                <div class="prefix">Date de début: </div>
+            </div>
+            <div class="flex-container-column box-space">
+                <div class="font-uppercase blue-color protocol"><strong>{{patient.protocol}}</strong></div>
+                <div><i class="fa-solid fa-star-of-life text-space blue-color"></i>{{patient.pathology}}</div>
+                <div>{{patient.protocolStartDate | date:'d/M/yyyy'}}</div>
+            </div>
+        </div>
+    </div>    
+</div>
